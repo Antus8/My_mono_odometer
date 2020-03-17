@@ -62,23 +62,7 @@ class SubscribeAndPublish
                 if(isPreviousAlreadyStored && isCurrentAlreadyStored){
                     cvtColor(current, current_gray, COLOR_BGR2GRAY);
                     featureDetection(current_gray, some_tracked_corners);
-                    //ASK
-                    /*
-                    cv::calcOpticalFlowPyrLK( previous_gray, current_gray, initial_corners, some_tracked_corners, status, err );
-                       
-                    // Get good matches
-                    vector<Point2f> good_new;
-                    for(uint i = 0; i < initial_corners.size(); i++)
-                    {
-                        // Select good points
-                        if(status[i] == 1) {
-                            good_new.push_back(initial_corners[i]);
-                            // Draw the tracks
-                            line(mask, some_tracked_corners[i], initial_corners[i], Scalar(0,255,255), 2);
-                            circle(current, some_tracked_corners[i], 5, Scalar(255,0,0), -1);
-                        }
-                    }
-                    */
+                    
                     featureTracking(previous_gray, current_gray, initial_corners, some_tracked_corners, status);
                     //Now I'm ready to estimate R and t
 

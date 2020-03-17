@@ -1,0 +1,8 @@
+prefix=/home/antonello/catkin_ws/install
+
+Name: ros_vio
+Description: Description of ros_vio
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/antonello/catkin_ws/install/lib 
+Requires: cv_bridge image_transport roscpp rospy sensor_msgs std_msgs

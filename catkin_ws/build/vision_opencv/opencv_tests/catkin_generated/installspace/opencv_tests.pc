@@ -1,0 +1,8 @@
+prefix=/home/antonello/catkin_ws/install
+
+Name: opencv_tests
+Description: Description of opencv_tests
+Version: 1.13.0
+Cflags: 
+Libs: -L/home/antonello/catkin_ws/install/lib 
+Requires: 
